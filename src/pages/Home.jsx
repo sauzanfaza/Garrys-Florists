@@ -1,7 +1,9 @@
 import { useEffect } from "react"
 import Navbar from "../components/Navbar"
+import ContactUs from "../components/ContactUs"
 import Aos from "aos"
 import "aos/dist/aos.css"
+import Footer from "../components/Footer"
 
 export default function Home() {
     useEffect(() => {
@@ -27,7 +29,7 @@ export default function Home() {
             </div>
         </section>
         <div className="py-10 px-15">
-            <div className="grid grid-cols-2 h-[80vh]">
+            <div className="grid grid-cols-1  md:grid-cols-2 h-[80vh]">
                 <div className="py-20 px-20">
                     <h1 className="text-xl font-bold"
                         data-aos="fade-right"
@@ -48,6 +50,34 @@ export default function Home() {
                 </div>
             </div>
         </div>
+        <div className="py-10 px-15 h-[80vh] bg-[#ebd3e1]">
+            <div className="py-10 px-20">
+                <h1 className="font-bold text-4xl">Why Choose Gary's Florist</h1>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 px-20 gap-8 text-justify">
+                <div className="">
+                    <p className="mb-6" data-aos="fade-right"
+                    data-aos-delay="0">Passionate Florists: Our team of passionate florists berings
+                    years of expertise and creativity to every arrangement. We infuse love and dedication into our work, 
+                    ensuring that each bloom tells a unique story.</p>
+                    <p data-aos="fade-right" data-aos-delay="200">Freshness Guaranteed: We source the finest and freshnest
+                    flowers to ensure longevity and vibrancy. Our commitment to
+                    quality extends to every petal, promising you the finest floral
+                    experience</p>
+                </div>
+                <div className="">
+                    <p className="mb-6" data-aos="fade-right" data-aos-delay="400">Local Southampton Charm: As a part of the Southampton
+                    community, we take pride in being your neighborhood florist.
+                    Supporting local and spreading floral joy is at the heart of
+                    what we do.</p>
+                    <p data-aos="fade-right" data-aos-delay="600">Customer-Centric Approach: Your satisfaction is our priority.
+                    We go the extra mile to understand your preferences,
+                    ensuring that every creation surpasses your expectations.</p>
+                </div>
+            </div>
+        </div>
+        <ContactUs />
+        <Footer />
         </>
     )
 }
