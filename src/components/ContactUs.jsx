@@ -6,7 +6,7 @@ export default function ContactUs() {
             className="w-full h-full object-cover"/>
 
             <div className="absolute inset-0 z-10 flex justify-end my-10 mx-20">
-                <div className="bg-white rounded-md shadow-md w-[600px]">
+                <div className="bg-white rounded-md shadow-md w-150">
                 <h1 className="px-8 py-4 font-bold text-2xl">Contact Us</h1>
 
             <div className="px-5">
