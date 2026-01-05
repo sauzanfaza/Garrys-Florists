@@ -13,7 +13,7 @@ export default function Navbar() {
                 <Link to="/about">
                 <div className="cursor-pointer text-[#B95E82] hover:text-[#6B3F69]">About</div>
                 </Link>
-                <Link>
+                <Link to="/contact">
                 <div className="cursor-pointer text-[#B95E82] hover:text-[#6B3F69]">Contact Us</div>
                 </Link>
             </div>
