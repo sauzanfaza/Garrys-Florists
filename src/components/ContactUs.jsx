@@ -1,4 +1,41 @@
+import { useState } from "react"
+
 export default function ContactUs() {
+  const [form, setForm] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    message: ''
+  })
+
+  const handleChange = (e) => {
+    setForm({...form, [e.target.name]: e.target.value})
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try{
+      const res = await fetch('http://localhost:5000/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify(form)
+      })
+      const data = await res.json()
+      console.log(data)
+      alert('Message sent!')
+
+      setForm({
+        name: '',
+        phone: '',
+        email: '',
+        message: ''
+      })
+    } catch(err) {
+      console.error(err)
+      alert('Error sending message!')
+    }
+  }
+
     return (
         <>
         <div className="relative h-[90vh]">
@@ -11,12 +48,17 @@ export default function ContactUs() {
 
             <div className="px-5">
                 {/* form */}
-          <form className="space-y-4">
+          <form 
+            onSubmit={handleSubmit}
+            className="space-y-4">
             {/* row 1 */}
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label className="text-sm text-gray-600">Name</label>
                 <input
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
                   type="text"
                   className="w-full border rounded-sm px-2 py-1 outline-none focus:ring-2 focus:ring-purple-400"
                 />
@@ -27,6 +69,9 @@ export default function ContactUs() {
                   Telephone Number
                 </label>
                 <input
+                name="phone"
+                value={form.phone}
+                onChange={handleChange}
                   type="text"
                   className="w-full border rounded-sm px-2 py-1 outline-none focus:ring-2 focus:ring-purple-400"
                 />
@@ -37,6 +82,9 @@ export default function ContactUs() {
             <div>
               <label className="text-sm text-gray-600">Email Address</label>
               <input
+              name="email"
+              value={form.email}
+              onChange={handleChange}
                 type="email"
                 className="w-full border rounded-sm px-2 py-1 outline-none focus:ring-2 focus:ring-purple-400"
               />
@@ -46,6 +94,9 @@ export default function ContactUs() {
             <div>
               <label className="text-sm text-gray-600">Message</label>
               <textarea
+              name="message"
+              value={form.message}
+              onChange={handleChange}
                 rows="3"
                 className="w-full border rounded-sm px-2 py-1 outline-none focus:ring-2 focus:ring-purple-400"
               />

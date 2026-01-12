@@ -1,7 +1,44 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
+import { useState } from "react"
 
 export default function Contact() {
+  const [form, setForm] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    message: ''
+  })
+
+  const handleChange = (e) => {
+    setForm({...form, [e.target.name]: e.target.value})
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try{
+      const respons = await fetch('http://localhost:5000/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify(form)
+      })
+      const data = await respons.json()
+      console.log(data)
+      alert('Message sent!!')
+
+      setForm({
+        name: '',
+        phone: '',
+        email: '',
+        message: ''
+      })
+  
+    } catch(err) {
+      console.error(err)
+      alert('Error sending message!')
+    }
+  }
+  
     return(
         <>
         <Navbar />
@@ -14,8 +51,9 @@ export default function Contact() {
             <h1 className="text-black text-4xl font-bold px-6">Contact Gary's Florist</h1>
             </div>
         </section>
-        <div className="grid grid-cols-2 h-full gap-0">
-            <div className="flex flex-col items-center px-10 py-20 text-left">
+        <div className="grid grid-cols-2 h-full ">
+            <div className="flex flex-col py-20 ">
+              <div className="px-20">
                 <h1 className="font-bold text-3xl">
                     Let'sConnect Through Flowers: <br />
                     Visit Us Today
@@ -28,6 +66,7 @@ export default function Contact() {
                     consultations, our team is just a call away at 01234 567 891 <br />
                     or reachable via email at garry@example.com
                 </p>
+                </div>
             </div>
             <div className="flex justify-end my-5 mx-20">
                 <div className="bg-white border rounded-md shadow-md w-150">
@@ -35,12 +74,17 @@ export default function Contact() {
 
             <div className="px-5">
                 {/* form */}
-          <form className="space-y-4">
+          <form 
+          onSubmit={handleSubmit}
+          className="space-y-4">
             {/* row 1 */}
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label className="text-sm text-gray-600">Name</label>
                 <input
+                name="name"
+                value={form.name}
+                onChange={handleChange}
                   type="text"
                   className="w-full border rounded-sm px-2 py-1 outline-none focus:ring-2 focus:ring-purple-400"
                 />
@@ -51,6 +95,9 @@ export default function Contact() {
                   Telephone Number
                 </label>
                 <input
+                name="phone"
+                value={form.phone}
+                onChange={handleChange}
                   type="text"
                   className="w-full border rounded-sm px-2 py-1 outline-none focus:ring-2 focus:ring-purple-400"
                 />
@@ -61,6 +108,9 @@ export default function Contact() {
             <div>
               <label className="text-sm text-gray-600">Email Address</label>
               <input
+              name="email"
+              value={form.email}
+              onChange={handleChange}
                 type="email"
                 className="w-full border rounded-sm px-2 py-1 outline-none focus:ring-2 focus:ring-purple-400"
               />
@@ -70,6 +120,9 @@ export default function Contact() {
             <div>
               <label className="text-sm text-gray-600">Message</label>
               <textarea
+              name="message"
+              value={form.message}
+              onChange={handleChange}
                 rows="3"
                 className="w-full border rounded-sm px-2 py-1 outline-none focus:ring-2 focus:ring-purple-400"
               />
