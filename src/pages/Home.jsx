@@ -29,12 +29,12 @@ export default function Home() {
             </div>
         </section>
         <div className="py-10 px-15">
-            <div className="grid grid-cols-1  md:grid-cols-2 h-[80vh]">
-                <div className="py-20 px-20">
-                    <h1 className="text-xl font-bold"
+            <div className="grid grid-cols-1  md:grid-cols-2 h-full">
+                <div className="md:py-20 md:px-20">
+                    <h1 className="md:text-xl lg:text-2xl font-bold"
                         data-aos="fade-right"
                         data-aos-delay="0">Florist Southampton</h1>
-                    <p className="py-6"
+                    <p className="py-4 md:py-6 lg:text-xl"
                         data-aos="fade-right"
                         data-aos-delay="300">At Gary's Florist, we believe in the language of flowers, <br />
                     a silent poetry that speaks volumes. Nestled in the heart <br />
@@ -42,35 +42,39 @@ export default function Home() {
                     those seeking the perfect bloom to express their <br />
                     emotions</p>
                     <p data-aos="fade-right"
-                    data-aos-delay="400">Let Gary's Florists be your choice for exquisite blooms, <br />
+                    data-aos-delay="400"
+                    className="lg:text-xl"
+                    >Let Gary's Florists be your choice for exquisite blooms, <br />
                     where every petal whispers a tale of beauty and emotions.</p>
                 </div>
-                <div className="py-15 px-20">
-                    <img src="./assets/Home-img1.jpg" alt="" />
+                <div className="flex justify-center m-10 md:my-10 md:mx-15">
+                    <img 
+                    className=" object-contain"
+                    src="./assets/Home-img1.jpg" alt="" />
                 </div>
             </div>
         </div>
-        <div className="py-10 px-15 h-[80vh] bg-[#ebd3e1]">
-            <div className="py-10 px-20">
-                <h1 className="font-bold text-4xl">Why Choose Gary's Florist</h1>
+        <div className="md:py-10 md:px-10 lg:py-25 lg:px-10 xl:px-30 h-full md:h-[80vh] lg:h-[80vh] bg-[#ebd3e1]">
+            <div className="py-8 px-20 md:py-5 md:px-20 lg:py-10 xl:py-8">
+                <h1 className="text-2xl font-bold md:text-3xl lg:text-5xl xl:text-6xl">Why Choose Gary's Florist</h1>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 px-20 gap-8 text-justify">
-                <div className="">
-                    <p className="mb-6" data-aos="fade-right"
+            <div className="grid grid-cols-1 md:grid-cols-2 px-20 md:gap-8 lg:gap-10 xl:gap-20 text-justify">
+                <div className="md:py-2 md:text-md lg:text-xl xl:text-3xl">
+                    <p className="mb-6 md:mb-6" data-aos="fade-right"
                     data-aos-delay="0">Passionate Florists: Our team of passionate florists berings
                     years of expertise and creativity to every arrangement. We infuse love and dedication into our work, 
                     ensuring that each bloom tells a unique story.</p>
-                    <p data-aos="fade-right" data-aos-delay="200">Freshness Guaranteed: We source the finest and freshnest
+                    <p className="mb-6" data-aos="fade-right" data-aos-delay="200">Freshness Guaranteed: We source the finest and freshnest
                     flowers to ensure longevity and vibrancy. Our commitment to
                     quality extends to every petal, promising you the finest floral
                     experience</p>
                 </div>
-                <div className="">
-                    <p className="mb-6" data-aos="fade-right" data-aos-delay="400">Local Southampton Charm: As a part of the Southampton
+                <div className="md:py-2 md:text-md lg:text-xl xl:text-3xl">
+                    <p className="mb-6 md:mb-12 xl:mb-16" data-aos="fade-right" data-aos-delay="400">Local Southampton Charm: As a part of the Southampton
                     community, we take pride in being your neighborhood florist.
                     Supporting local and spreading floral joy is at the heart of
                     what we do.</p>
-                    <p data-aos="fade-right" data-aos-delay="600">Customer-Centric Approach: Your satisfaction is our priority.
+                    <p className="mb-8" data-aos="fade-right" data-aos-delay="500">Customer-Centric Approach: Your satisfaction is our priority.
                     We go the extra mile to understand your preferences,
                     ensuring that every creation surpasses your expectations.</p>
                 </div>
