@@ -42,34 +42,34 @@ export default function Contact() {
     return(
         <>
         <Navbar />
-        <section className="relative mx-auto h-[80vh]">
+        <section className="relative">
             <img src="./assets/contact-hero.jpg" alt="contact-hero" 
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-white/90 via-white/20 to-transparent"></div>
-            <div className="absolute inset-0 flex flex-col justify-end px-12 py-10">
-            <h1 className="text-black text-4xl font-bold px-6">Contact Gary's Florist</h1>
+            <div className="absolute inset-0 flex flex-col justify-end my-10">
+            <h1 className="text-black text-4xl md:text-5xl xl:text-7xl font-bold px-6 lg:px-10 md:mb-6 lg:mb-8">Contact Gary's Florist</h1>
             </div>
         </section>
-        <div className="grid grid-cols-2 h-full ">
-            <div className="flex flex-col py-20 ">
-              <div className="px-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-0 h-full ">
+            <div className="flex flex-col px-12 py-8 lg:py-20 ">
+              <div className="xl:px-30 lg:px-8">
                 <h1 className="font-bold text-3xl">
                     Let'sConnect Through Flowers: <br />
                     Visit Us Today
                 </h1>
-                <p className="my-4">
-                    Immerse yourself in the world of Gray's Florists and let <br />
-                    out blooms tell your story. Visit our boutique at 63 <br />
-                    Example Lane, Southampton, and experience the magic <br />
-                    of floral artistry. For inquities, collaborations, or <br />
-                    consultations, our team is just a call away at 01234 567 891 <br />
+                <p className="mt-4">
+                    Immerse yourself in the world of Gray's Florists and let 
+                    out blooms tell your story. Visit our boutique at 63 
+                    Example Lane, Southampton, and experience the magic 
+                    of floral artistry. For inquities, collaborations, or 
+                    consultations, our team is just a call away at 01234 567 891 
                     or reachable via email at garry@example.com
                 </p>
                 </div>
             </div>
-            <div className="flex justify-end my-5 mx-20">
-                <div className="bg-white border rounded-md shadow-md w-150">
+            <div className="flex items-center lg:justify-end pb-8 px-8 py-8 lg:px-0 lg:my-5 lg:mx-20">
+                <div className="bg-white border rounded-md shadow-2xl w-150">
                 <h1 className="px-8 py-4 font-bold text-2xl">Contact Us</h1>
 
             <div className="px-5">
@@ -78,7 +78,7 @@ export default function Contact() {
           onSubmit={handleSubmit}
           className="space-y-4">
             {/* row 1 */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <div>
                 <label className="text-sm text-gray-600">Name</label>
                 <input

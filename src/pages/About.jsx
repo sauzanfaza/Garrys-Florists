@@ -23,18 +23,18 @@ export default function About() {
                 <div className="absolute inset-0 bg-white/20"></div>
 
                 {/* profile and name */}
-                <div className="absolute inset-0 flex flex-col justify-end px-12 py-10">
+                <div className="absolute inset-0 flex flex-col justify-end px-12 py-10 lg:py-16">
                     <div className="flex items-start">
                     <img src="./assets/Garryimg.png" alt="Garry-owner" 
-                    className="mx-6 my-2 w-30"/>
+                    className="mx-6 my-2 w-30 lg:my-6 lg:w-40"/>
                     </div>
-                    <h1 className="text-black text-3xl font-bold px-6">About Gary's Florists</h1>
+                    <h1 className="text-black text-3xl lg:text-5xl font-bold px-6 lg:py-4">About Gary's Florists</h1>
                 </div>
             </section>
             {/* about section */}
-            <div className="py-15 px-15">
-                <div className="grid grid-cols-2 gap-4 h-full">
-                    <div className="flex flex-col py-8">
+            <div className="py-8 px-6 xl:py-15 xl:px-15">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 h-full">
+                    <div className="flex flex-col py-8 xl:py-30">
                         <div className=" px-10 text-start"
                         data-aos="fade-right"
                         data-aos-delay="0">
@@ -79,7 +79,7 @@ export default function About() {
                     </div>
                     <div>
                         <img src="./assets/buket.jpg" alt="buket" 
-                        className="object-cover p-24"/>
+                        className="object-cover md:p-8 lg:px-12 lg:py-40 xl:p-24"/>
                     </div>
                 </div>
             </div>

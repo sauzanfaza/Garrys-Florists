@@ -38,13 +38,13 @@ export default function ContactUs() {
 
     return (
         <>
-        <div className="relative h-[90vh]">
+        <div className="relative min-h-screen">
             <img src="./assets/form-bg.jpg" alt="contact-bg" 
-            className="w-full h-full object-cover"/>
+            className="absolute inset-0 w-full h-full object-cover"/>
 
-            <div className="absolute inset-0 z-10 flex justify-end my-10 mx-20">
-                <div className="bg-white rounded-md shadow-md w-150">
-                <h1 className="px-8 py-4 font-bold text-2xl">Contact Us</h1>
+            <div className="absolute inset-0 z-10 flex justify-center md:items-center md:justify-end mx-4 my-6 md:my-10 md:mx-20">
+                <div className="bg-white rounded-md shadow-md w-full max-w-lg md:my-4 md:py-4">
+                <h1 className="px-8 py-2 font-bold text-md md:text-xl lg:text-2xl">Contact Us</h1>
 
             <div className="px-5">
                 {/* form */}
@@ -52,7 +52,7 @@ export default function ContactUs() {
             onSubmit={handleSubmit}
             className="space-y-4">
             {/* row 1 */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               <div>
                 <label className="text-sm text-gray-600">Name</label>
                 <input
@@ -60,7 +60,7 @@ export default function ContactUs() {
                   value={form.name}
                   onChange={handleChange}
                   type="text"
-                  className="w-full border rounded-sm px-2 py-1 outline-none focus:ring-2 focus:ring-purple-400"
+                  className="w-full border rounded-sm py-1 px-2 md:py-2 outline-none focus:ring-2 focus:ring-purple-400"
                 />
               </div>
 
@@ -73,7 +73,7 @@ export default function ContactUs() {
                 value={form.phone}
                 onChange={handleChange}
                   type="text"
-                  className="w-full border rounded-sm px-2 py-1 outline-none focus:ring-2 focus:ring-purple-400"
+                  className="w-full border rounded-sm py-1 px-2 md:py-2 outline-none focus:ring-2 focus:ring-purple-400"
                 />
               </div>
             </div>
@@ -86,7 +86,7 @@ export default function ContactUs() {
               value={form.email}
               onChange={handleChange}
                 type="email"
-                className="w-full border rounded-sm px-2 py-1 outline-none focus:ring-2 focus:ring-purple-400"
+                className="w-full border rounded-sm py-1 px-2 md:py-2 outline-none focus:ring-2 focus:ring-purple-400"
               />
             </div>
 
@@ -97,8 +97,8 @@ export default function ContactUs() {
               name="message"
               value={form.message}
               onChange={handleChange}
-                rows="3"
-                className="w-full border rounded-sm px-2 py-1 outline-none focus:ring-2 focus:ring-purple-400"
+                rows="2 "
+                className="w-full border rounded-sm py-1 px-2 md:py-2 md:h-32 outline-none focus:ring-2 focus:ring-purple-400"
               />
             </div>
 
@@ -106,7 +106,7 @@ export default function ContactUs() {
             <div className="flex justify-end">
               <button
                 type="submit"
-                className="bg-purple-600 text-white px-4 py-2 rounded-sm hover:bg-purple-700 transition"
+                className="bg-purple-600 text-white py-1 px-4 md:py-2 rounded-sm hover:bg-purple-700 transition"
               >
                 Send
               </button>
