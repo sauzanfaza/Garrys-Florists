@@ -42,7 +42,7 @@ export default function Contact() {
     return(
         <>
         <Navbar />
-        <section className="relative">
+        <section className="relative mx-auto h-[80vh]">
             <img src="./assets/contact-hero.jpg" alt="contact-hero" 
                 className="w-full h-full object-cover"
             />
