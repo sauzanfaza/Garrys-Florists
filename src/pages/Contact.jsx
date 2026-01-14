@@ -48,7 +48,7 @@ export default function Contact() {
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-white/90 via-white/20 to-transparent"></div>
             <div className="absolute inset-0 flex flex-col justify-end my-10">
-            <h1 className="text-black text-4xl md:text-5xl xl:text-7xl font-bold px-6 lg:px-10 md:mb-6 lg:mb-8">Contact Gary's Florist</h1>
+            <h1 className="text-black text-4xl md:text-5xl font-bold px-6 lg:px-10 md:mb-6 lg:mb-8">Contact Gary's Florist</h1>
             </div>
         </section>
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-0 h-full ">

@@ -34,7 +34,7 @@ export default function About() {
             {/* about section */}
             <div className="py-8 px-6 xl:py-15 xl:px-15">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 h-full">
-                    <div className="flex flex-col py-8 xl:py-30">
+                    <div className="flex flex-col py-8 xl:py-40">
                         <div className=" px-10 text-start"
                         data-aos="fade-right"
                         data-aos-delay="0">
@@ -79,7 +79,7 @@ export default function About() {
                     </div>
                     <div>
                         <img src="./assets/buket.jpg" alt="buket" 
-                        className="object-cover md:p-8 lg:px-12 lg:py-40 xl:p-24"/>
+                        className="object-cover md:p-8 lg:px-12 lg:py-40 xl:py-40 xl:p-24"/>
                     </div>
                 </div>
             </div>
